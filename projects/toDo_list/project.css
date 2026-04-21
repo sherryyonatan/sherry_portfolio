@@ -278,3 +278,54 @@ a {
     max-width: 100%;
   }
 }
+@media (max-width: 600px) {
+
+  .project-page {
+    width: 100%;
+    padding: 30px 16px 60px;
+  }
+
+  .project-preview-card {
+    padding: 18px;
+    gap: 18px;
+    border-radius: 20px;
+  }
+
+  .project-preview-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-preview-content p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .project-buttons {
+    flex-wrap: wrap; 
+    gap: 10px;
+  }
+
+  .btn {
+    width: 100%; 
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .tech-tags {
+    justify-content: center;
+  }
+
+  .tech-tags span {
+    font-size: 0.8rem;
+    padding: 6px 10px;
+  }
+
+  .project-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-preview-image img {
+    border-radius: 14px;
+  }
+
+}
