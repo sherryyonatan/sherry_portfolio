@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>אפליקציית מזג אוויר</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+  />
+</head>
+<body class="day-mode">
+  <div class="app">
+    <div class="sky-bg"></div>
+    <div class="sun-glow"></div>
+    <div class="cloud cloud-1"></div>
+    <div class="cloud cloud-2"></div>
+    <div class="cloud cloud-3"></div>
+    <div class="cloud cloud-4"></div>
+
+    <main class="weather-page">
+
+      <!-- חיפוש -->
+      <section class="top-search">
+        <div class="search-box">
+          <input
+            id="searchInput"
+            type="text"
+            placeholder="חפשי עיר..."
+            autocomplete="off"
+          />
+          <div id="suggestionsBox" class="suggestions-box"></div>
+        </div>
+      </section>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-content">
+          <p class="city" id="cityName">חיפה</p>
+          <h1 class="temperature" id="mainTemp">--°</h1>
+          <p class="condition" id="weatherStatus">--</p>
+          <p class="min-max" id="minMaxTemp">מקס׳: --° | מינ׳: --°</p>
+        </div>
+      </section>
+
+      <!-- סיכום + שעתי -->
+      <section class="card combined-card">
+        <div class="card-section summary">
+          <p id="summaryText">
+            תנאי מזג האוויר יתעדכנו לפי העיר שנבחרה.
+          </p>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="card-section hourly">
+          <p class="sunset-note" id="sunsetNote">שקיעה: --:--</p>
+
+          <div class="hourly-scroll" id="hourlyContainer">
+          </div>
+        </div>
+      </section>
+
+      <!-- תחזית יומית -->
+      <section class="card">
+        <div class="section-header">
+          <h2>תחזית ל-7 ימים</h2>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="daily-list" id="dailyContainer">
+        </div>
+      </section>
+
+      <!-- מדדים נוספים -->
+      <section class="card">
+        <div class="section-header">
+          <h2>מדדי מזג אוויר נוספים</h2>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="extra-stats-grid" id="extraStatsBox">
+        </div>
+      </section>
+
+      <!-- אינדקס קרינה -->
+<section class="card">
+  <div class="section-header">
+    <h2>אינדקס קרינה</h2>
+  </div>
+
+  <div class="section-divider"></div>
+
+  <div id="uvStandaloneBox"></div>
+</section>
+
+      <!-- מפת רוח -->
+      <section class="card">
+        <div class="section-header">
+          <h2>משבי רוח</h2>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="wind-map-card" id="precipBox">
+        </div>
+      </section>
+
+      <!-- התרעות -->
+      <section class="card">
+        <div class="section-header">
+          <h2>התרעות מזג אוויר</h2>
+        </div>
+
+        <div class="section-divider"></div>
+
+        <div class="alerts-box" id="alertsBox"></div>
+      </section>
+
+    </main>
+  </div>
+
+  <!-- פופ אפ אינדקס -->
+  <div class="uv-modal" id="uvModal">
+    <div class="uv-modal-backdrop" id="uvModalBackdrop"></div>
+
+    <div class="uv-modal-card">
+      <button class="uv-modal-close" id="uvModalClose" aria-label="סגירה">×</button>
+
+      <div class="uv-modal-header">
+        <p class="uv-modal-kicker">אינדקס קרינה</p>
+
+        <div class="uv-modal-top">
+          <h2 class="uv-modal-title" id="uvModalValue">--</h2>
+          <p class="uv-modal-level" id="uvModalLevel">--</p>
+        </div>
+
+        <p class="uv-modal-desc" id="uvModalDesc">--</p>
+      </div>
+
+      <div class="uv-chart-wrapper">
+        <div class="uv-chart-labels">
+          <span>קיצוני</span>
+          <span>גבוה מאוד</span>
+          <span>גבוה</span>
+          <span>בינוני</span>
+          <span>נמוך</span>
+        </div>
+
+        <div class="uv-chart-box" id="uvChartBox">
+          <div class="uv-chart-tooltip" id="uvChartTooltip"></div>
+          <svg id="uvChartSvg" viewBox="0 0 340 180" preserveAspectRatio="none"></svg>
+        </div>
+
+        <div class="uv-chart-hours" id="uvChartHours"></div>
+      </div>
+
+      <div class="uv-modal-footer">
+        <p id="uvModalAdvice">--</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

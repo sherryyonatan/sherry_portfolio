@@ -1,0 +1,413 @@
+{
+  "folders": [
+    {
+      "id": "family",
+      "name": "משפחה",
+      "description": "רגעים משפחתיים, חגים, אירועים ותמונות אהובות",
+      "coverImage": "assets/images/family/2.jpg",
+      "photos": [
+        {
+          "id": "family-1",
+          "title": "האחים למשפחת יונתן",
+          "description": "כולם",
+          "date": "2016-03-15",
+          "image": "../assets/images/family/0.jpg",
+          "likes": 8,
+          "likedByUser": false,
+          "comments": [
+            "איזו אווירה יפה",
+            "תמונה מהממת"
+          ]
+        },
+        {
+          "id": "family-2",
+          "title": "טיול שבת",
+          "description": "אורלי, סיגל ורונה לא במערת הקשת",
+          "date": "2025-02-11",
+          "image": "../assets/images/family/1.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-3",
+          "title": "ירושלים - מהחתונה של אושרי",
+          "description": "כולם",
+          "date": "2025-09-01",
+          "image": "../assets/images/family/2.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-4",
+          "title": "אורלי וסיגל התאומות",
+          "description": "כולם",
+          "date": "2025-09-01",
+          "image": "../assets/images/family/3.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-5",
+          "title": "מימונה",
+          "description": "על המופלטות",
+          "date": "2025-04-11",
+          "image": "../assets/images/family/4.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-6",
+          "title": "טיול שבת",
+          "description": "סתם יחד",
+          "date": "2026-02-11",
+          "image": "../assets/images/family/5.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-7",
+          "title": "נוביגוד",
+          "description": "על המופלטות",
+          "date": "2025-12-31",
+          "image": "../assets/images/family/6.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "family-8",
+          "title": "לייה חוגגת 10",
+          "description": "סתם יחד",
+          "date": "2023-07-18",
+          "image": "../assets/images/family/7.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "korona",
+      "name": "התאומים קורונה",
+      "description": "בילויים, קפה, חופשות וזיכרונות משותפים",
+      "coverImage": "assets/images/korona/korona1.jpg",
+      "photos": [
+        {
+          "id": "korona-1",
+          "title": "קורן&רונה",
+          "description": "ברוכים הבאים לתאומים קורונה",
+          "date": "2023-02-02",
+          "image": "../assets/images/korona/korona0.jpg",
+          "likes": 50,
+          "likedByUser": false,
+          "comments": [
+            "אהבתי",
+            "איזה כיף לכם"
+          ]
+        },
+        {
+          "id": "korona-2",
+          "title": "מתוקים",
+          "description": "רגע קטן ושמח באמצע השבוע.",
+          "date": "2023-02-05",
+          "image": "../assets/images/korona/korona1.jpg",
+          "likes": 3,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "korona-3",
+          "title": "עם האח הגדול ינאי",
+          "description": "תמונה ראשונה יחד.",
+          "date": "2023-02-04",
+          "image": "../assets/images/korona/korona2.jpg",
+          "likes": 11,
+          "likedByUser": false,
+          "comments": [
+            "אהבתי",
+            "איזה כיף לכם"
+          ]
+        },
+        {
+          "id": "korona-4",
+          "title": "רונה",
+          "description": "נולדה שניה במשקל 2.4 קילו.",
+          "date": "2023-02-05",
+          "image": "../assets/images/korona/korona3.jpg",
+          "likes": 3,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "korona-5",
+          "title": "סבא וסבתא מתמוגגים",
+          "description": "אי אפשר להאשים אותם",
+          "date": "2023-02-20",
+          "image": "../assets/images/korona/korona4.jpg",
+          "likes": 8,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "korona-6",
+          "title": "קורן",
+          "description": "סנדוויץ נולד במשקל 2.6 קילו",
+          "date": "2023-02-05",
+          "image": "../assets/images/korona/korona5.jpg",
+          "likes": 3,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "korona-7",
+          "title": "ינאי ורונה",
+          "description": "לא נפרדים.",
+          "date": "2023-02-06",
+          "image": "../assets/images/korona/korona6.jpg",
+          "likes": 20,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "korona-8",
+          "title": "טיול בשמש",
+          "description": "עם דודה שרי ואמא",
+          "date": "2023-03-28",
+          "image": "../assets/images/korona/korona7.jpg",
+          "likes": 3,
+          "likedByUser": false,
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "lali",
+      "name": "לאלי",
+      "description": "התיקייה הכי מתוקה בגלריה",
+      "coverImage": "assets/images/lali/lali1.jpg",
+      "photos": [
+        {
+          "id": "lali-1",
+          "title": "ברוכה הבאה לאלי",
+          "description": "היום הראשון של לאלי בבית החדש",
+          "date": "2025-07-16",
+          "image": "../assets/images/lali/lali1.jpg",
+          "likes": 0,
+          "likedByUser": false,
+          "comments": [
+            "מושלמת"
+          ]
+        },
+        {
+          "id": "lali-2",
+          "title": "שנ״צ",
+          "description": "רגע של שלווה באמצע היום.",
+          "date": "2025-07-18",
+          "image": "../assets/images/lali/lali2.jpg",
+          "likes": 1,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-3",
+          "title": "מתרגלת לאזור החדש",
+          "description": "כלוב גורים",
+          "date": "2025-07-20",
+          "image": "../assets/images/lali/lali3.jpg",
+          "likes": 4,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-4",
+          "title": "מנוחת הלוחמת",
+          "description": "אחרי לילה של אזעקות",
+          "date": "2025-07-22",
+          "image": "../assets/images/lali/lali4.jpg",
+          "likes": 1,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-5",
+          "title": "סל כביסה לדרך",
+          "description": "יש הפסקת אש אז נוסעים בחזרה לקריות",
+          "date": "2025-07-24",
+          "image": "../assets/images/lali/lali5.jpg",
+          "likes": 2,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-6",
+          "title": "לאלי&קורן",
+          "description": "שעת סיפור",
+          "date": "2025-08-01",
+          "image": "../assets/images/lali/lali6.jpg",
+          "likes": 20,
+          "likedByUser": false,
+          "comments": [
+            "איזו מתוקה",
+            "מושלמת"
+          ]
+        },
+        {
+          "id": "lali-7",
+          "title": "סתם תמונה",
+          "description": "סתם.",
+          "date": "2025-08-24",
+          "image": "../assets/images/lali/lali7.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-8",
+          "title": "כל החצים מובילים",
+          "description": "לרכבל חיפה",
+          "date": "2026-09-01",
+          "image": "../assets/images/lali/lali8.jpg",
+          "likes": 14,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-9",
+          "title": "האריה שאהב תות",
+          "description": "סתם ככה...",
+          "date": "2026-09-24",
+          "image": "../assets/images/lali/lali9.jpg",
+          "likes": 8,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-10",
+          "title": "כלבה של אהבה",
+          "description": "אין מה לומר.",
+          "date": "2026-10-24",
+          "image": "../assets/images/lali/lali10.jpg",
+          "likes": 11,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-11",
+          "title": "תמונה יחד",
+          "description": "התמונה הראשונה יחד",
+          "date": "2026-11-01",
+          "image": "../assets/images/lali/lali11.jpg",
+          "likes": 20,
+          "likedByUser": false,
+          "comments": [
+            "איזו מתוקה",
+            "מושלמת"
+          ]
+        },
+        {
+          "id": "lali-12",
+          "title": "נחה",
+          "description": "רגע של שלווה באמצע היום.",
+          "date": "2026-11-20",
+          "image": "../assets/images/lali/lali12.jpg",
+          "likes": 13,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-13",
+          "title": "סבתא, רונה ולאלי מתאפרות",
+          "description": "מהממות טבעי",
+          "date": "2026-12-01",
+          "image": "../assets/images/lali/lali13.jpg",
+          "likes": 5,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-14",
+          "title": "סתם תמונה אהובה של לאלי ושרי",
+          "description": "תמונה",
+          "date": "2026-12-18",
+          "image": "../assets/images/lali/lali14.jpg",
+          "likes": 10,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-15",
+          "title": "טיול אחר הצהריים בעבודה",
+          "description": "רגע של שלווה באמצע היום.",
+          "date": "2026-12-24",
+          "image": "../assets/images/lali/lali15.jpg",
+          "likes": 14,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-16",
+          "title": "חייבת תספורת SOS",
+          "description": "בהול",
+          "date": "2026-01-12",
+          "image": "../assets/images/lali/lali16.jpg",
+          "likes": 1,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-17",
+          "title": "רונה של לאלי",
+          "description": "ולאלי של רונה",
+          "date": "2026-02-23",
+          "image": "../assets/images/lali/lali17.jpg",
+          "likes": 10,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-18",
+          "title": "פרפרית",
+          "description": "תמונה מפורים - שלא היה הודות לאיראן",
+          "date": "2026-03-04",
+          "image": "../assets/images/lali/lali18.jpg",
+          "likes": 12,
+          "likedByUser": false,
+          "comments": []
+        },
+        {
+          "id": "lali-20",
+          "title": "תמונה ישנה מנובי גוד",
+          "description": "צולמה ב-31.12.25.",
+          "date": "2026-03-24",
+          "image": "../assets/images/lali/lali20.jpg",
+          "likes": 14,
+          "likedByUser": false,
+          "comments": []
+        }
+      ]
+    },
+    {
+      "id": "trips",
+      "name": "טיולים",
+      "description": "זיכרונות, נופים ורגעים יפים מהדרך",
+      "coverImage": "assets/images/trips/1.jpg",
+      "photos": [
+        {
+          "id": "trips-1",
+          "title": "סבא, ינאי ורונה",
+          "description": "רגע מיוחד מהטיול.",
+          "date": "2026-02-10",
+          "image": "../assets/images/trips/1.jpg",
+          "likes": 0,
+          "likedByUser": false,
+          "comments": []
+        }
+      ]
+    }
+  ]
+}

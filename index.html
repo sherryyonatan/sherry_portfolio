@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SherryYonatan Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+</head>
+<body>
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">SherryYonatan</a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#about">אודותיי</a>
+        <a href="#services">שירותים</a>
+        <a href="#projects">פרויקטים</a>
+      </nav>
+
+      <a href="#contact" class="btn btn-nav">דברו איתי</a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="פתח תפריט">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero ===== -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-form-card">
+        <h2>רוצים שניצור עבורכם דברים מדהימים יחד?</h2>
+        <p>השאירו פרטים ואחזור אליכם &gt;&gt;</p>
+
+        <form id="heroForm" class="hero-form">
+          <input type="text" placeholder="שם" required />
+          <input type="email" placeholder="מייל" required />
+          <input type="tel" placeholder="טלפון" />
+
+          <button type="submit" class="btn btn-primary">
+            <span>שליחה</span>
+            <span class="btn-arrow">←</span>
+          </button>
+
+          <div class="form-success-popup">
+            ההודעה נשלחה - ניצור אתך קשר בהקדם 🫶🏻
+          </div>
+        </form>
+      </div>
+
+      <div class="hero-content">
+        <h1>SherryYonatan</h1>
+        <p>
+          <span class="fix-direction">
+            UX/UI מעצבת | PPC קופירייטרית | מנהלת <br>
+            Full Stack וסטודנטית לפיתוח
+          </span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section id="about" class="about section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <h2>נעים להכיר</h2>
+          <p>
+            בוגרת תואר בעיצוב גרפי, מעצבת UX/UI, כותבת תוכן ומנהלת קמפיינים כבר מעל עשור.
+            ב־11 השנים האחרונות עברתי דרך כמעט כל זווית בעולם השיווק - עיצוב, תוכן, פרסום וניהול מחלקות שיווק,
+            מה שנתן לי ראייה רחבה ויכולת להבין גם את התמונה הגדולה וגם את הפרטים הקטנים בה.
+            אני אוהבת לקחת רעיונות, לפשט אותם, להפוך אותם למשהו יפה ומדויק - ואז לגרום לזה גם לעבוד בפועל.
+
+            היום אני משלבת בין יצירתיות, חשיבה שיווקית וכלים טכנולוגיים כדי לבנות חוויות דיגיטליות שמביאות לא רק תוצאות, אלא גם חוויה בלתי נשכחת.
+          </p>
+
+          <a href="#contact" class="btn btn-secondary">שנכיר עוד?</a>
+        </div>
+
+        <div class="about-side">
+          <div class="profile-circle">
+            <img src="img/PIC1.jpg" alt="Sherry Yonatan" />
+          </div>
+
+          <div class="social-links">
+            <a href="https://www.facebook.com/sherry.yonatan?locale=he_IL" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.instagram.com/sherry_yonatan/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="https://wa.me/972542591880" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+            </a>
+
+            <a href="https://www.linkedin.com/in/sherry-yonatan/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Services ===== -->
+  <section id="services" class="services section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>השירותים שלי</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-pen-nib"></i></div>
+          <h3>קופירייטרית</h3>
+          <p>מסרים שיווקיים מדויקים עם חיבור לקהל יעד</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-bullhorn"></i></div>
+          <h3>מנהלת PPC</h3>
+          <p>ניהול קמפיינים חכמים שמביאים תוצאות</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-pen-ruler"></i></div>
+          <h3>מעצבת UX/UI</h3>
+          <p>תכנון ממשקים מעוצבים, אסתטיים, מדויקים ונוחים למשתמש</p>
+        </article>
+
+        <article class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>פיתוח Full Stack</h3>
+          <p>בניית פרויקטים אינטראקטיביים ב־HTML, CSS ו־JavaScript</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Projects ===== -->
+  <section id="projects" class="projects section">
+    <div class="container">
+      <div class="section-heading">
+        <h2>הפרויקטים שלי</h2>
+        <p>6 פרויקטים מתוך מודול JavaScript</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 - Todo List -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/todo.png" alt="Todo List" />
+          </div>
+
+          <div class="project-body">
+            <h3>Todo List</h3>
+            <p>
+              ניהול משימות יומי עם חלוקת המשימות לפי שעות והעברת המשימות למחר,
+              אחוזי התקדמות, שמירת היום וחוויית שימוש נקייה.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/toDo_list/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/toDo_list/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 - X-O -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/ImageXO.png" alt="X-O Game" />
+          </div>
+
+          <div class="project-body">
+            <h3>X-O Game</h3>
+            <p>
+              משחק אינטראקטיבי לשני שחקנים, הכולל מערכת ניקוד, סאונד ואנימציות -
+              חוויית משתמש דינמית ב-JavaScript.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/XO/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/XO/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 - Memory Game -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/memory.png" alt="Memory Game" />
+          </div>
+
+          <div class="project-body">
+            <h3>Memory Game</h3>
+            <p>
+              משחק זיכרון אינטראקטיבי לעד ארבעה משתתפים, הכולל ניקוד, עיצוב יחודי
+              עם ארבעה נושאים לקלפים ופופ-אפים מרגשים.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/memory/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/memory/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 - Weather App -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/Weather.png" alt="Weather App" />
+          </div>
+
+          <div class="project-body">
+            <h3>Weather App</h3>
+            <p>
+              אפליקציית מזג אוויר עם API, מיקום משתמש, תחזית שעתית ויומית.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/weather/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/weather/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 - Photo Album -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/gallery.png" alt="Photo Album" />
+          </div>
+
+          <div class="project-body">
+            <h3>Photo Album</h3>
+            <p>
+              גלריית תמונות חכמה עם קטגוריות, תגובות, לייקים ותצוגת אלבומים.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/Gallery/gallery/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/Gallery/login/login.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 - Pacman -->
+        <article class="project-card">
+          <div class="project-image-wrap">
+            <img src="img/Pac-Man.png" alt="Pacman" />
+          </div>
+
+          <div class="project-body">
+            <h3>Pacman</h3>
+            <p>
+              משחק ה-Pacman הינו משחק אייקוני ונוסטלגי, שקיבל רוח עיצוב עדכנית
+              עם סגנון דינמי ובו ניקוד, חיים, אויבים, מסכי פתיחה וניצחון.
+            </p>
+
+            <div class="project-actions">
+              <a href="projects/Pac-Man/project.html" class="btn btn-small">
+                לעמוד הפרויקט
+              </a>
+
+              <a
+                href="projects/Pac-Man/index.html"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="btn btn-small btn-outline"
+              >
+                לצפייה
+              </a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact ===== -->
+  <section id="contact" class="contact section">
+    <div class="container">
+      <div class="contact-card">
+        <div class="contact-text">
+          <h2>יצירת קשר</h2>
+          <p>
+            יש לכם רעיון לפרויקט, אתר תדמית או חוויית משתמש שאתם רוצים לבנות?
+            אשמח לשמוע מכם.
+          </p>
+        </div>
+
+        <form id="contactForm" class="contact-form">
+          <input type="text" placeholder="שם" required />
+          <input type="tel" placeholder="טלפון" />
+          <textarea placeholder="הודעה" rows="5" required></textarea>
+          <button type="submit" class="btn btn-primary">שליחה</button>
+
+          <div class="form-success-popup">
+            ההודעה נשלחה - ניצור אתך קשר בהקדם 🫶🏻
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2026 SherryYonatan כל הזכויות שמורות.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

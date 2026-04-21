@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>X or O for 2</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- מעטפת כללית של המשחק -->
+  <div class="game-page">
+    <!-- כותרת עליונה -->
+    <header class="top-title">
+      <h1>
+        <span class="title-x">X</span>
+        <span class="title-text">or</span>
+        <span class="title-o">O</span>
+        <span class="title-text">for 2</span>
+      </h1>
+    </header>
+
+    <main class="game-wrapper">
+      <!-- =========================
+           אזור הלוח + טיימר + תור
+      ========================== -->
+      <section class="board-section">
+        <!-- טיימר -->
+        <div class="timer-box" id="timerBox">
+          <span class="timer-label">Time:</span>
+          <span id="timerValue">15</span>
+        </div>
+
+        <!-- מעטפת ללוח כדי לשים עליו קו ניצחון -->
+        <div class="board-wrapper">
+          <!-- לוח המשחק -->
+          <div class="board" id="board">
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+          </div>
+
+          <!-- קו ניצחון - נשלט מתוך JS -->
+          <div class="winning-line hidden" id="winningLine"></div>
+        </div>
+
+        <!-- תצוגת תור -->
+        <div class="turn-box" id="turnBox">
+          <span class="turn-label">Turn:</span>
+          <span class="turn-player" id="turnPlayer">X</span>
+        </div>
+
+        <!-- אזור ניקוד -->
+        <div class="score-row">
+          <div class="score-card score-x">
+            <span class="score-symbol">X</span>
+            <span>points:</span>
+            <span id="xScore">0</span>
+          </div>
+
+          <div class="score-card score-draw">
+            <span>Draw:</span>
+            <span id="drawScore">0</span>
+          </div>
+
+          <div class="score-card score-o">
+            <span class="score-symbol">O</span>
+            <span>points:</span>
+            <span id="oScore">0</span>
+          </div>
+        </div>
+      </section>
+
+      <div class="separator"></div>
+
+      <!-- =========================
+           כפתורי שליטה
+      ========================== -->
+      <section class="controls">
+        <button class="control-btn danger-btn" id="resetBtn">Reset points</button>
+        <button class="control-btn" id="newGameBtn">New Game</button>
+        <button class="control-btn" id="exitBtn">Exit</button>
+      </section>
+    </main>
+  </div>
+
+  <!-- =========================
+       פופאפ ניצחון
+  ========================== -->
+  <div class="overlay hidden" id="winOverlay">
+    <div class="popup" id="winPopup">
+      <!-- כפתור סגירה -->
+      <button class="close-popup" id="closeWinPopup">✕</button>
+
+      <!-- מי ניצח -->
+      <div class="popup-symbol" id="winnerSymbol">X</div>
+
+      <!-- טקסט ניצחון -->
+<h2 class="popup-title" id="popupTitle">You Won!</h2>
+
+      <!-- כפתור למשחק חדש -->
+      <button class="popup-btn" id="popupNewGameBtn">New Game</button>
+    </div>
+  </div>
+ <!-- =========================
+       Start Game Popup
+  ========================== -->
+  <div class="overlay" id="startOverlay">
+    <div class="popup exit-popup">
+      <h2 class="popup-title exit-title">Start Game?</h2>
+      <p class="exit-text">Press start when both players are ready.</p>
+
+      <div class="exit-actions">
+        <button class="popup-btn" id="startGameBtn">Start Game</button>
+      </div>
+    </div>
+  </div>
+  <!-- =========================
+       פופאפ / מסך יציאה
+  ========================== -->
+  <div class="overlay hidden" id="exitOverlay">
+    <div class="popup exit-popup">
+      <h2 class="popup-title exit-title">Exit Game?</h2>
+      <p class="exit-text">You can return to the game anytime.</p>
+
+      <div class="exit-actions">
+        <button class="popup-btn" id="backToGameBtn">Back to Game</button>
+        <button class="popup-btn exit-confirm-btn" id="confirmExitBtn">Exit</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- קנבס לקונפטי -->
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- חיבור לקובץ JS -->
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>כניסה לגלריה</title>
+  <link rel="stylesheet" href="../shared/styles.css" />
+</head>
+<body class="login-body">
+  <main class="login-page">
+    <section class="login-card">
+      <div class="login-brand">
+        <p class="eyebrow">Photo Gallery</p>
+        <h1>ברוכים הבאים לגלריית התמונות שלכם</h1>
+        <p class="login-text">
+          התחברו כדי לצפות באוסף התמונות, לאהוב, להגיב, לשמור תמונות ולהנות מרגעים מיוחדים.
+        </p>
+      </div>
+
+      <form id="loginForm" class="login-form">
+        <label>
+          <input type="text" id="username" placeholder="הקלידי שם משתמש" required />
+        </label>
+
+        <label>
+          <input type="password" id="password" placeholder="הקלידי סיסמה" required />
+        </label>
+
+        <button type="submit" class="primary-btn">התחברות</button>
+        <p class="hint">לבדיקה: Yonatan / since1986</p>
+        <p id="loginError" class="error-message"></p>
+      </form>
+    </section>
+  </main>
+
+  <script src="login.js"></script>
+</body>
+</html>

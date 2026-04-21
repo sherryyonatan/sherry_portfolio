@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pac-Man</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- START SCREEN -->
+    <section id="startScreen" class="screen active">
+      <div class="start-card">
+        <h1 class="logo-title pacman-word">
+  Pa<span class="pacman-letter" aria-hidden="true"></span>-Man
+</h1>
+        <p class="start-subtitle">Enter your name to start the game</p>
+
+        <input id="playerName" type="text" placeholder="Enter your name" />
+
+        <button id="startBtn" type="button" class="primary-btn">Start Game</button>
+      </div>
+    </section>
+
+    <!-- GAME SCREEN -->
+    <section id="gameScreen" class="screen">
+      <header class="game-header">
+  <div class="top-left-fixed">
+    <div id="currentPlayer" class="hud-box">Current Player: -</div>
+    <div id="lives" class="hud-box lives-box">❤️ ❤️ ❤️</div>
+  </div>
+
+  <div class="center-top-area">
+  <h1 class="page-title pacman-word">
+    Pa<span class="pacman-letter" aria-hidden="true"></span>-Man
+  </h1>
+
+  <div class="center-stats">
+    <div id="score" class="hud-box">Score: 0</div>
+    <div id="timer" class="hud-box">Time: 0s</div>
+    <div id="bestTime" class="hud-box">Best Time: --</div>
+  </div>
+
+  <div class="top-actions">
+    <button id="pauseBtn" type="button" class="action-btn pause-btn">Pause</button>
+    <button id="exitBtnGame" type="button" class="action-btn exit-btn">Exit</button>
+  </div>
+</div>
+</header>
+
+      <main class="game-main">
+        <div class="board-wrap">
+          <div id="powerStatus" class="power-status"></div>
+          <div id="board" class="board"></div>
+          <div id="pauseOverlay" class="pause-overlay hidden">PAUSE</div>
+          <div id="hitOverlay" class="hit-overlay hidden">💔</div>
+        </div>
+        </main>
+</section>
+
+
+    <!-- GAME OVER -->
+    <section id="gameOverScreen" class="screen overlay-screen">
+      <div class="ghost-rain" id="ghostRain"></div>
+
+      <div class="modal-card compact">
+        <h2 class="modal-title danger">GAME OVER</h2>
+        <p class="modal-text">The ghosts got you.</p>
+        <div class="modal-actions">
+          <button id="newGameBtn" type="button" class="primary-btn">New Game</button>
+          <button id="exitBtnOver" type="button" class="secondary-btn">Exit</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- WIN -->
+    <section id="winScreen" class="screen overlay-screen">
+      <canvas id="confettiCanvas"></canvas>
+
+      <div class="modal-card compact win-card">
+        <h2 class="modal-title success">YOU WIN!</h2>
+        <p id="winText" class="modal-text">You cleared the board.</p>
+        <div id="recordBanner" class="record-banner hidden">New Record!</div>
+
+        <div class="modal-actions">
+<button id="playAgainBtn" type="button" class="primary-btn win-newgame-btn">New Game</button>
+          <button id="exitBtnWin" type="button" class="secondary-btn">Exit</button>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

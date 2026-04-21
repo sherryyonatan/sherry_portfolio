@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ניהול משתמשים לאלבום</title>
+  <link rel="stylesheet" href="../shared/styles.css" />
+  <style>
+    .admin-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 28px 20px 60px;
+      display: grid;
+      gap: 24px;
+    }
+
+    .admin-grid {
+      display: grid;
+      grid-template-columns: 360px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+
+    .admin-card {
+      background: #ffffff;
+      border: 1px solid #ececec;
+      border-radius: 18px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+      padding: 24px;
+    }
+
+    .admin-card h2,
+    .admin-card h3 {
+      margin: 0 0 16px;
+    }
+
+    .admin-note {
+      margin: 0;
+      color: #6f6f6f;
+      line-height: 1.7;
+    }
+
+    .admin-form {
+      display: grid;
+      gap: 14px;
+    }
+
+    .admin-form label {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .admin-form input,
+    .admin-form select {
+      width: 100%;
+      border: 1px solid #eeeeee;
+      border-radius: 12px;
+      padding: 12px 14px;
+      font: inherit;
+      background: #fff;
+    }
+
+    .admin-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .status-text {
+      min-height: 22px;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+
+    .status-text.success {
+      color: #1f7a1f;
+    }
+
+    .status-text.error {
+      color: #c1121f;
+    }
+
+    .users-table-wrap {
+      overflow-x: auto;
+    }
+
+    .users-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 620px;
+    }
+
+    .users-table th,
+    .users-table td {
+      text-align: right;
+      padding: 14px 12px;
+      border-bottom: 1px solid #eeeeee;
+      vertical-align: middle;
+    }
+
+    .users-table th {
+      background: #fafafa;
+      color: #555;
+      font-weight: 700;
+    }
+
+    .role-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 6px 10px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      min-width: 78px;
+      background: #f3f3f3;
+      color: #222;
+    }
+
+    .role-badge.admin {
+      background: rgba(61, 3, 36, 0.12);
+      color: #3d0324;
+    }
+
+    .role-badge.viewer {
+      background: rgba(0, 0, 0, 0.06);
+      color: #333;
+    }
+
+    .inline-btn {
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      background: #ffffff;
+      padding: 8px 12px;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .inline-btn:hover {
+      background: #f7f7f7;
+    }
+
+    .inline-btn.danger {
+      color: #c1121f;
+      border-color: rgba(193, 18, 31, 0.18);
+    }
+
+    @media (max-width: 900px) {
+      .admin-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header sticky-header">
+    <div>
+      <p class="eyebrow">Admin Panel</p>
+      <h1>ניהול משתמשים</h1>
+    </div>
+
+    <div class="header-actions">
+      <a href="../index.html" class="secondary-btn">חזרה לאלבום</a>
+      <button id="logoutBtn" class="ghost-btn">התנתקות</button>
+    </div>
+  </header>
+
+  <main class="admin-shell">
+    <section class="admin-card">
+      <h2>גישה לאלבום</h2>
+      <p class="admin-note">
+        כאן אפשר ליצור משתמשים חדשים, לשנות הרשאות, ולמחוק משתמשים קיימים.
+        רק משתמש עם הרשאת admin יכול להיכנס לעמוד הזה.
+      </p>
+    </section>
+
+    <section class="admin-grid">
+      <section class="admin-card">
+        <h3>יצירת משתמש חדש</h3>
+
+        <form id="createUserForm" class="admin-form">
+          <label>
+            <span>שם מלא</span>
+            <input type="text" id="displayName" placeholder="למשל: Sherry Yonatan" required />
+          </label>
+
+          <label>
+            <span>שם משתמש</span>
+            <input type="text" id="username" placeholder="למשל: sherry" required />
+          </label>
+
+          <label>
+            <span>סיסמה</span>
+            <input type="text" id="password" placeholder="למשל: 1234" required />
+          </label>
+
+          <label>
+            <span>הרשאה</span>
+            <select id="role" required>
+              <option value="viewer">viewer - צפייה בלבד</option>
+              <option value="admin">admin - ניהול מלא</option>
+            </select>
+          </label>
+
+          <div class="admin-actions">
+            <button type="submit" class="primary-btn">שמירת משתמש</button>
+            <button type="button" id="resetUsersBtn" class="secondary-btn">איפוס ברירת מחדל</button>
+          </div>
+
+          <p id="statusText" class="status-text"></p>
+        </form>
+      </section>
+
+      <section class="admin-card">
+        <h3>רשימת משתמשים</h3>
+
+        <div class="users-table-wrap">
+          <table class="users-table">
+            <thead>
+              <tr>
+                <th>שם מלא</th>
+                <th>שם משתמש</th>
+                <th>הרשאה</th>
+                <th>סיסמה</th>
+                <th>פעולות</th>
+              </tr>
+            </thead>
+            <tbody id="usersTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <script src="admin.js"></script>
+</body>
+</html>

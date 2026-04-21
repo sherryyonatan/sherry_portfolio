@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <section class="todo-card">
+      <header class="top-header">
+        <h1 class="title">To-Do</h1>
+
+        <div class="meta-box">
+          <label class="meta-row">
+            <span>Date:</span>
+            <input type="date" id="dayDate" />
+          </label>
+
+          <label class="meta-row">
+            <span>Topic:</span>
+            <input
+              type="text"
+              id="dayTopic"
+              placeholder="Enter topic"
+            />
+          </label>
+        </div>
+      </header>
+
+      <section class="progress-section">
+        <p class="progress-label">Percentage of tasks completed:</p>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="progressFill"></div>
+          <span class="progress-value" id="progressText">0%</span>
+        </div>
+      </section>
+
+      <section class="tasks-section">
+        <div class="tasks-header">
+          <div></div>
+          <div class="time-col-title">Time</div>
+          <div class="activity-col-title">Activity</div>
+        </div>
+
+        <div class="task-list" id="taskList"></div>
+      </section>
+
+      <section class="action-buttons">
+        <button id="saveDayBtn" type="button">Save Day</button>
+        <button id="clearListBtn" type="button">Delete List</button>
+      </section>
+
+      <section class="tomorrow-section">
+        <h2>Tomorrow’s Tasks</h2>
+      <div class="tomorrow-grid" id="tomorrowGrid"></div>
+      </section>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

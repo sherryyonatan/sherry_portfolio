@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>עמוד הבית - גלריית תמונות</title>
+  <link rel="stylesheet" href="shared/styles.css" />
+</head>
+<body>
+  <header class="site-header sticky-header">
+    <div>
+      <p class="eyebrow">Yonatan Gallery</p>
+      <h1>גלריית התמונות שלך</h1>
+    </div>
+
+    <div class="header-actions">
+      <button id="openFolderModalBtn" class="secondary-btn">+ אלבום חדש</button>
+      <button id="logoutBtn" class="ghost-btn">התנתקות</button>
+
+      <a href="admin/admin.html" id="adminBtn" class="secondary-btn hidden admin-btn">
+        <svg class="admin-icon" viewBox="0 0 24 24" fill="none">
+          <path d="M12 15.5C14.7614 15.5 17 13.2614 17 10.5C17 7.73858 14.7614 5.5 12 5.5C9.23858 5.5 7 7.73858 7 10.5C7 13.2614 9.23858 15.5 12 15.5Z" stroke="currentColor" stroke-width="1.5"/>
+          <path d="M4 20C4.5 17 7.5 15.5 12 15.5C16.5 15.5 19.5 17 20 20" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+        </svg>
+        ניהול משתמשים
+      </a>
+    </div>
+  </header>
+
+  <main class="page-shell home-shell">
+    <section class="hero-slider card">
+      <div id="sliderTrack" class="slider-track"></div>
+      <div id="sliderDots" class="slider-dots"></div>
+    </section>
+
+    <section class="folders-section card">
+      <div class="section-head">
+        <div>
+          <h2>האלבומים שלך</h2>
+        </div>
+      </div>
+
+      <div id="foldersGrid" class="folders-grid"></div>
+    </section>
+  </main>
+
+  <div id="folderModal" class="modal hidden">
+    <div class="modal-box">
+      <button class="close-modal" data-close="folderModal">×</button>
+      <h3>יצירת תיקייה חדשה</h3>
+
+      <form id="newFolderForm" class="modal-form">
+        <label>
+          <span>שם תיקייה</span>
+          <input type="text" id="folderName" placeholder="למשל: טיולים" required />
+        </label>
+
+        <label>
+          <span>שם לזיהוי פנימי באנגלית</span>
+          <input type="text" id="folderSlug" placeholder="למשל: trips" required />
+        </label>
+
+        <label>
+          <span>תמונה מקדימה</span>
+          <input type="file" id="folderCover" accept="image/*" required />
+        </label>
+
+        <button type="submit" class="primary-btn">שמור תיקייה</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="shared/common.js"></script>
+  <script src="gallery/home.js"></script>
+</body>
+</html>

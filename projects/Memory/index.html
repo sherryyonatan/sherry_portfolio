@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Memory Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- SCREEN 1 - GAME MODE -->
+  <section id="modeScreen" class="screen active-screen">
+    <div class="screen-box">
+      <h1 class="title">Memory Game</h1>
+      <h2 class="screen-heading">Choose Game Mode</h2>
+
+      <div class="mode-buttons">
+        <button class="menu-btn mode-btn" data-mode="computer">1 Player vs Computer</button>
+        <button class="menu-btn mode-btn" data-mode="2">2 Players</button>
+        <button class="menu-btn mode-btn" data-mode="3">3 Players</button>
+        <button class="menu-btn mode-btn" data-mode="4">4 Players</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 2 - PLAYER NAMES -->
+  <section id="namesScreen" class="screen hidden-screen">
+    <div class="screen-box">
+      <h2 class="screen-heading">Enter Player Names</h2>
+
+      <form id="namesForm" class="names-form">
+        <div id="namesInputs" class="names-inputs"></div>
+
+        <div class="screen-actions">
+          <button type="button" id="backToModeBtn" class="menu-btn small-btn">Back</button>
+          <button type="submit" class="menu-btn small-btn continue-btn">Continue</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- SCREEN 3 - TOPIC -->
+  <section id="topicScreen" class="screen hidden-screen">
+    <div class="screen-box">
+      <h2 class="screen-heading">Choose Topic</h2>
+
+      <div class="topic-buttons">
+        <button class="menu-btn topic-btn" data-topic="flowers">🌼Flowers</button>
+        <button class="menu-btn topic-btn" data-topic="space">🪐Space</button>
+        <button class="menu-btn topic-btn" data-topic="weather">🌤️Weather</button>
+        <button class="menu-btn topic-btn" data-topic="desserts">🍰Desserts</button>
+      </div>
+
+      <div class="screen-actions">
+        <button type="button" id="backToNamesBtn" class="menu-btn small-btn">Back</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SCREEN 4 - GAME -->
+  <section id="gameScreen" class="screen hidden-screen">
+
+    <header class="header">
+      <h1 class="title">Memory Game</h1>
+      <div id="timer" class="timer">00:20</div>
+    </header>
+
+    <section class="board-area">
+      <div id="player1" class="player-box left">
+        Player 1: <span>0</span>
+      </div>
+
+      <div id="player2" class="player-box right">
+        Player 2: <span>0</span>
+      </div>
+
+      <div id="player3" class="player-box top hidden">
+        Player 3: <span>0</span>
+      </div>
+
+      <main class="game-board" id="gameBoard"></main>
+
+      <div id="player4" class="player-box bottom hidden">
+        Player 4: <span>0</span>
+      </div>
+    </section>
+
+    <section class="topic-control-row">
+      <button class="btn topic-control-btn" data-topic="flowers">🌼 Flowers</button>
+      <button class="btn topic-control-btn" data-topic="space">🪐 Space</button>
+      <button class="btn topic-control-btn" data-topic="weather">🌤️ Weather</button>
+      <button class="btn topic-control-btn" data-topic="desserts">🍰 Desserts</button>
+    </section>
+
+    <footer class="controls">
+      <button id="shuffleBtn" class="btn">Shuffle</button>
+      <button id="newGameBtn" class="btn">New Game</button>
+      <button id="resetScoreBtn" class="btn">Reset Points</button>
+      <button id="exitBtn" class="btn">Exit</button>
+    </footer>
+
+  </section>
+
+  <!-- SCREEN 5 - WINNER -->
+  <section id="winnerScreen" class="screen hidden-screen">
+    <div class="screen-box winner-box">
+      <h2 class="screen-heading">Game Over</h2>
+<div id="winnerConfetti" class="winner-confetti"></div>
+      <div id="winnerMessage" class="winner-message">Winner: Player 1</div>
+      <div id="winnerScore" class="winner-score">Score: 0</div>
+
+      <div class="screen-actions">
+        <button id="playAgainBtn" class="menu-btn small-btn">Play Again</button>
+        <button id="homeBtn" class="menu-btn small-btn">Home</button>
+      </div>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
